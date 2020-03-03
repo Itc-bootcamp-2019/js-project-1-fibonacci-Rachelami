@@ -1,0 +1,20 @@
+.main-square {
+	background-color: white;
+	border: 1px solid black;
+	height: 500px;
+	width: 500px;
+	padding: 20px;
+}
+.input-style {
+	width: 40px;
+}
+.y-style {
+	display: flex;
+}
+.flex-container {
+	display: flex;
+	align-items: flex-end;
+}
+.margin-r {
+	margin-right: 10px;
+}
