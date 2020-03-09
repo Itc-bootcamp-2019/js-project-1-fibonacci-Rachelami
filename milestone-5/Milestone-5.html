@@ -11,21 +11,43 @@
 			crossorigin="anonymous"
 		/>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-
+		<link
+			href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+			crossorigin="anonymous"
+		/>
 		<link rel="stylesheet" href="Milestone-5.css" />
 	</head>
 	<body>
 		<div class="main-square">
-			<h1>Fibonacci calculator</h1>
-			<div class="flex-container">
-				<span class="margin-r">The Fibonacci of</span>
-				<input type="text" id="myText" value="" class="input-style" />
-				<button class="margin-r" onclick="myFunction()">is</button>
+			<div class="row">
+				<div class="col-8 offset-1 calculator">Fibonacci calculator</div>
+			</div>
+
+			<div class="flex-container row">
+				<span class="main-text">The Fibonacci of</span>
+				<input type="number" id="myText" value="" class="input-style" />
+				<button class="margin-r btn-primary" onclick="fibofun(); secfibo()">
+					Is
+				</button>
 				<p id="demo"></p>
-				<span class="y-style" id="y">
-					<div id="whenLoad"></div>
-					<div id="error"></div>
-				</span>
+				<span class="y-style" id="y"></span>
+			</div>
+			<div class="row">
+				<div class="col-2 offset-2">
+					<div id="error50"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-2 offset-1 res">Results</div>
+			</div>
+			<div class="row">
+				<div class="col-10 offset-1" id="alltheInfo"></div>
 			</div>
 		</div>
 		<script src="Milestone-5.js"></script>

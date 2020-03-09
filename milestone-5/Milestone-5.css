@@ -1,44 +1,128 @@
 .main-square {
 	background-color: white;
-	border: 1px solid black;
-	height: 600px;
-	width: 600px;
+	width: 100vw;
+	height: 100vh;
 	padding: 20px;
 }
-.input-style {
-	width: 40px;
+
+.none {
+	display: none;
 }
+
+.calculator {
+	font-size: 72px;
+	font-family: "Open Sans";
+	margin-top: 100px;
+	margin-bottom: 50px;
+}
+
+.input-style {
+	width: 86px;
+	height: 38px;
+	border: 1px solid #cccccc;
+	box-sizing: border-box;
+	border-radius: 4px;
+	padding: 7px 14px 7px;
+}
+
+.input-style-error {
+	width: 86px;
+	height: 38px;
+	border: 1px solid #d9534f;
+	box-sizing: border-box;
+	border-radius: 4px;
+	padding: 7px 14px 7px;
+	color: #d9534f;
+}
+
 .y-style {
 	display: flex;
+	align-items: center;
+	padding-bottom: 3px;
+	text-decoration: underline;
+	font-weight: bold;
+	font-size: 24px;
 }
+
 .flex-container {
 	display: flex;
 	align-items: flex-end;
 }
-.margin-r {
+
+.main-text {
 	margin-right: 10px;
+	font-size: 24px;
+	margin-left: 10%;
 }
-#error{
-	color:red;
+
+.btn-primary {
+	width: 39px;
+	height: 38px;
+	background: #0275d8;
+	border: 1px solid #0275d8;
+	box-sizing: border-box;
+	border-radius: 4px;
+	margin-left: 14px;
+	font-size: 16px;
+	font-family: "Open Sans";
+	margin-left: 14px;
+	margin-right: 14px;
+}
+
+#error {
+	color: red;
+	font-size: 16px;
+	margin-left: 14px;
+}
+
+#error50 {
+	color: #a94442;
+	font-size: 16px;
+}
+
+.error50box {
+	background: #f2dede;
+	border: 1px solid #ebcccc;
+	border-radius: 4px;
+	width: 180px;
+	height: 33px;
+	margin-top: 5px;
+	padding: 0px 5px;
 }
 
 .loader {
-  border: 3px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 3px solid #3498db;
-  width: 20px;
-  height: 20px;
-  -webkit-animation: spin 2s linear infinite; /* Safari */
-  animation: spin 2s linear infinite;
+	border: 3px solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 3px solid #3498db;
+	width: 20px;
+	height: 20px;
+	-webkit-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
 }
 
-/* Safari */
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
+.res {
+	font-family: "Open Sans";
+	font-size: 54px;
+	margin-top: 87px;
+	margin-bottom: 60px;
 }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+#alltheInfo {
+	font-family: "Open Sans";
+	font-size: 1.5vw;
+}
+
+.separator {
+	border-bottom: 1px solid black;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+#error42{
+	font-family: 'Open Sans';
+font-size: 16px;
+color: #D9534F;
+
 }
