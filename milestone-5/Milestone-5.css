@@ -120,9 +120,12 @@
 	font-weight: bold;
 }
 
-#error42{
-	font-family: 'Open Sans';
-font-size: 16px;
-color: #D9534F;
+#error42 {
+	font-family: "Open Sans";
+	font-size: 16px;
+	color: #d9534f;
+}
 
+.margin-left {
+	margin-left: 9%;
 }
