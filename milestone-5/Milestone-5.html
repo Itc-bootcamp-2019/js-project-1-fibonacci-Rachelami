@@ -32,7 +32,7 @@
 			<div class="flex-container row">
 				<span class="main-text">The Fibonacci of</span>
 				<input type="number" id="myText" value="" class="input-style" />
-				<button class="margin-r btn-primary" onclick="fibofun(); secfibo() ">
+				<button class="margin-r btn-primary" onclick="fibofun(); secfibo()">
 					Is
 				</button>
 				<p id="demo"></p>
@@ -45,17 +45,32 @@
 			</div>
 			<div class="form-check row margin-left">
 				<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-				<!-- <label class="form-check-label" for="defaultCheck1"> -->
 				  Save Calculation
 				</label>
 			  </div>
 			<div class="row">
 				<div class="col-2 offset-1 res">Results</div>
 			</div>
+
+			<div class="dropdown">
+				<button class="btn btn-secondary dropdown-toggle margin-left Sort" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				  Sort By
+				</button>
+				<div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+				  <button class="dropdown-item" type="button" onclick="NumberAsc()">Number Asc</button>
+				  <button class="dropdown-item" type="button" onclick="NumberDesc()">Number Desc</button>
+				  <button class="dropdown-item" type="button" onclick="DateAsc()">Date Asc</button>
+				  <button class="dropdown-item" type="button" onclick="DateDesc()">Date Desc</button>
+				</div>
+			  </div>
+
 			<div class="row">
 				<div class="col-10 offset-1" id="alltheInfo"></div>
 			</div>
 		</div>
 		<script src="Milestone-5.js"></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 	</body>
 </html>

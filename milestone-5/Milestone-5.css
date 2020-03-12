@@ -104,7 +104,7 @@
 	font-family: "Open Sans";
 	font-size: 54px;
 	margin-top: 87px;
-	margin-bottom: 60px;
+	margin-bottom: 26px;
 }
 
 #alltheInfo {
@@ -128,4 +128,21 @@
 
 .margin-left {
 	margin-left: 9%;
+}
+
+.size {
+	height: 300px;
+}
+
+.Sort {
+	background: #e6e6e6;
+	border: 1px solid #cccccc;
+	box-sizing: border-box;
+	border-radius: 4px;
+	width: 122px;
+	height: 38px;
+	font-size: 16px;
+	color: #373a3c;
+	font-family: "Open Sans";
+	margin-bottom: 40px;
 }

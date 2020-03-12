@@ -67,12 +67,13 @@ function secfibo() {
 			.then(response => response.json())
 			.then(data => {
 				console.log(data.results);
-				let allInfo = data.results[0];
-				for (let a = 0; a <= data.results.length - 1; a++) {
-					allInfo = data.results[a];
 
-					console.log(allInfo.number);
-					let d = new Date();
+				for (let a = 0; a <= data.results.length - 1; a++) {
+					let allInfo = data.results[a];
+					let newArray = [];
+					newArray.push(allInfo);
+					let d = data.results[a].createdDate;
+					new Date(d);
 					document.getElementById("alltheInfo").innerHTML +=
 						"The Fibonacci of " +
 						"<span class='bold'>" +
@@ -83,20 +84,227 @@ function secfibo() {
 						allInfo.result +
 						"</span>" +
 						" Calculated at: " +
-						d +
+						new Date(d) +
 						"<hr/>";
 				}
 			});
 	}
 }
 
+function DateAsc() {
+	document.getElementById("alltheInfo").innerHTML = "";
+	let useInput = document.getElementById("myText").value;
+	if (useInput != 42 && useInput < 50) {
+		let url = "http://localhost:5050/getFibonacciResults";
+		console.log(url);
+		fetch(url)
+			.then(response => response.json())
+			.then(data => {
+				console.log(data.results);
+
+				let newArray = [];
+
+				for (let a = 0; a <= data.results.length - 1; a++) {
+					let allInfo = data.results[a];
+					newArray.push(allInfo);
+				}
+				function compare(a, b) {
+					const dateA = a.createdDate;
+					const dateB = b.createdDate;
+
+					let comparison = 0;
+					if (dateA > dateB) {
+						comparison = 1;
+					} else if (dateA < dateB) {
+						comparison = -1;
+					}
+					return comparison;
+				}
+
+				console.log(newArray.sort(compare));
+
+				for (let a = newArray.length - 1; a > 0; a--) {
+					let d = newArray[a].createdDate;
+					new Date(d);
+					document.getElementById("alltheInfo").innerHTML +=
+						"The Fibonacci of " +
+						"<span class='bold'>" +
+						newArray[a].number +
+						"</span>" +
+						" is " +
+						"<span class='bold'>" +
+						newArray[a].result +
+						"</span>" +
+						" Calculated at: " +
+						new Date(d) +
+						"<hr/>";
+				}
+			});
+	}
+}
+
+function DateDesc() {
+	document.getElementById("alltheInfo").innerHTML = "";
+	let useInput = document.getElementById("myText").value;
+	if (useInput != 42 && useInput < 50) {
+		let url = "http://localhost:5050/getFibonacciResults";
+		console.log(url);
+		fetch(url)
+			.then(response => response.json())
+			.then(data => {
+				console.log(data.results);
+
+				let newArray = [];
+
+				for (let a = 0; a <= data.results.length - 1; a++) {
+					let allInfo = data.results[a];
+					newArray.push(allInfo);
+				}
+				function compare(a, b) {
+					const dateA = a.createdDate;
+					const dateB = b.createdDate;
+
+					let comparison = 0;
+					if (dateA > dateB) {
+						comparison = 1;
+					} else if (dateA < dateB) {
+						comparison = -1;
+					}
+					return comparison;
+				}
+
+				console.log(newArray.sort(compare));
+
+				for (let a = 0; a < newArray.length - 1; a++) {
+					let d = newArray[a].createdDate;
+					new Date(d);
+					document.getElementById("alltheInfo").innerHTML +=
+						"The Fibonacci of " +
+						"<span class='bold'>" +
+						newArray[a].number +
+						"</span>" +
+						" is " +
+						"<span class='bold'>" +
+						newArray[a].result +
+						"</span>" +
+						" Calculated at: " +
+						new Date(d) +
+						"<hr/>";
+				}
+			});
+	}
+}
+
+function NumberAsc() {
+	document.getElementById("alltheInfo").innerHTML = "";
+	let useInput = document.getElementById("myText").value;
+	if (useInput != 42 && useInput < 50) {
+		let url = "http://localhost:5050/getFibonacciResults";
+		console.log(url);
+		fetch(url)
+			.then(response => response.json())
+			.then(data => {
+				console.log(data.results);
+
+				let newArray = [];
+
+				for (let a = 0; a <= data.results.length - 1; a++) {
+					let allInfo = data.results[a];
+					newArray.push(allInfo);
+				}
+				function compare(a, b) {
+					const unmberA = a.number;
+					const numberB = b.number;
+
+					let comparison = 0;
+					if (unmberA > numberB) {
+						comparison = 1;
+					} else if (unmberA < numberB) {
+						comparison = -1;
+					}
+					return comparison;
+				}
+
+				console.log(newArray.sort(compare));
+
+				for (let a = 0; a < newArray.length - 1; a++) {
+					let d = newArray[a].createdDate;
+					new Date(d);
+					document.getElementById("alltheInfo").innerHTML +=
+						"The Fibonacci of " +
+						"<span class='bold'>" +
+						newArray[a].number +
+						"</span>" +
+						" is " +
+						"<span class='bold'>" +
+						newArray[a].result +
+						"</span>" +
+						" Calculated at: " +
+						new Date(d) +
+						"<hr/>";
+				}
+			});
+	}
+}
+
+function NumberDesc() {
+	document.getElementById("alltheInfo").innerHTML = "";
+	let useInput = document.getElementById("myText").value;
+	if (useInput != 42 && useInput < 50) {
+		let url = "http://localhost:5050/getFibonacciResults";
+		console.log(url);
+		fetch(url)
+			.then(response => response.json())
+			.then(data => {
+				console.log(data.results);
+
+				let newArray = [];
+
+				for (let a = 0; a <= data.results.length - 1; a++) {
+					let allInfo = data.results[a];
+					newArray.push(allInfo);
+				}
+				function compare(a, b) {
+					const unmberA = a.number;
+					const numberB = b.number;
+
+					let comparison = 0;
+					if (unmberA > numberB) {
+						comparison = 1;
+					} else if (unmberA < numberB) {
+						comparison = -1;
+					}
+					return comparison;
+				}
+
+				console.log(newArray.sort(compare));
+
+				for (let a = newArray.length - 1; a > 0; a--) {
+					let d = newArray[a].createdDate;
+					new Date(d);
+					document.getElementById("alltheInfo").innerHTML +=
+						"The Fibonacci of " +
+						"<span class='bold'>" +
+						newArray[a].number +
+						"</span>" +
+						" is " +
+						"<span class='bold'>" +
+						newArray[a].result +
+						"</span>" +
+						" Calculated at: " +
+						new Date(d) +
+						"<hr/>";
+				}
+			});
+	}
+}
 //to to later:
 // appendchild
 // createlement
 // let x = document.createElement("myelement")
 
-let myData = document.createElement(myData);
-myData.appendChild(
-	`The Fibonacci of ${allInfo.number} is ${allInfo.result} Calculated at: ${d}`
-);
-document.getElementById("alltheInfo").innerHTML += myData;
+// let myData = document.createElement(myData);
+// myData.appendChild(
+// 	`The Fibonacci of ${allInfo.number} is ${allInfo.result} Calculated at: ${d}`
+// );
+// document.getElementById("alltheInfo").innerHTML += myData;
